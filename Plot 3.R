@@ -5,7 +5,7 @@ t <- strptime(paste(house_hold_power_2007$Date, house_hold_power_2007$Time, sep=
 house_hold_power_2007$Date <- t
 png(filename = "Plot 3.png",width = 480, height = 480,bg = "white")
 plot(house_hold_power_2007$Date,house_hold_power_2007$Sub_metering_1,type = "l",xlab = "",ylab = "Energy sub metering")
-with(house_hold_power_2007,lines(Date,Sub_metering_2,col = "red"))
-with(house_hold_power_2007,lines(Date,Sub_metering_3,col = "blue"))
+with(house_hold_power_2007,points(Date,Sub_metering_2,col = "red"))
+with(house_hold_power_2007,points(Date,Sub_metering_3,col = "blue"))
 legend("topright",pch = 1, col = c("black","red","blue"),legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 dev.off()
